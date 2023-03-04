@@ -1,0 +1,303 @@
+* {
+    -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.container {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.menu {
+    background-color: #091627;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+}
+
+.logo span {
+    margin-left: 10px!important;
+    color: rgb(253, 236, 2)!important;
+    position: relative!important;
+    left: -140px!important;
+    font-size: 20px!important;
+}
+
+.logo_mod {
+    color: rgb(253, 236, 2)!important;
+    position: relative!important;
+    left: -132px!important;
+    top: 4px!important;
+    font-size: 20px!important;
+}
+
+ul li {
+    list-style-type: none;
+    display: inline-flex;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.about-link {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.about-link:hover {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.btn-primary {
+    background-color: rgb(253, 236, 2)!important;
+    color: #091627!important;
+    font-weight: bold!important;
+    font-size: 15px!important;
+    padding: 15px!important;
+}
+
+.caretdown {
+    margin-left: 10px;
+}
+
+.OC {
+    margin-right: 5px;
+}
+
+#body {
+    height: 1900px;
+    background-color: #091627;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 70px;
+    overflow-y: hidden;
+}
+
+.title {
+    background-color: #091627;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+}
+
+header {
+    text-align: left;
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: 50px;
+}
+
+header span {
+    font-size: 15px;
+    margin: 15px;
+    position: relative;
+    top: -3px;
+    border: #0b213d solid 1px!important;
+    background-color: rgb(9, 22, 25);
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.sub-title {
+    text-align: left;
+    font-weight: 600;
+    font-size: 18px;
+    position: relative;
+    top: 20px;
+    margin-left: 50px;
+}
+
+div section .sub-menu .dropdown .btn-secondary {
+    text-align: right!important;
+    background-color: rgb(9, 22, 25)!important;
+    margin-left: 10px!important;
+    position: relative!important;
+    top: -27px!important;
+    right: 150px!important;
+    border: #0b213d solid 1px!important;
+    padding-right: 120px;
+}
+
+.dropdown-menu li {
+    display: block;
+    margin: 0;
+}
+
+.horizontal-line {
+    margin-top: 5px;
+    margin-left: 50px;
+    margin-right: 50px;
+    color: #b3cef5;
+    opacity: 0.1;
+}
+
+.map_container {
+    border: grey solid 1px;
+    border-radius: 10px;
+    position: relative;
+    top: 220px;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.map_controller {
+    position: absolute;
+    top: 200px;
+    left: 1250px;
+    font-size: 15px;
+    margin-top: -70px;
+}
+
+.plus {
+    color: grey;
+    background-color: #ffffff;
+    display: block;
+    border: #ffffff solid 1px;
+    border-radius: 3px 3px 0px 0px;
+    padding: 10px;
+}
+
+.minus {
+    margin-top: 8px;
+    color: grey;
+    background-color: #ffffff;
+    display: block;
+    border: #ffffff solid 1px;
+    border-radius: 0px 0px 3px 3px;
+    padding: 10px;
+}
+
+.map_image {
+    position: relative;
+    top: 75px;
+    left: 70px;
+}
+
+.marker {
+    font-size: 40px;
+    position: relative;
+    top: -100px;
+    margin-bottom: -100px;
+}
+
+.marker1 {
+    color: lightblue;
+    position: relative;
+    left: 1250px;
+    display: block;
+}
+
+.marker2 {
+    color: green;
+    position: relative;
+    left: 1250px;
+    display: block;
+    margin-top: -30px;
+}
+
+.marker3 {
+    color: red;
+    position: relative;
+    left: 1250px;
+    display: block;
+    margin-top: -30px;
+}
+
+.marker_label {
+    color: grey;
+    position: relative;
+    left: 630px;
+    top: -60px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.analysis {
+    position: relative;
+    top: 230px;
+    display: flex;
+}
+
+.nigeria_map {
+    margin-left: -500px;
+}
+
+.nigeria_map h6 {
+    color: #ffffff;
+}
+
+.data dl {
+    color: #ffffff;
+    margin: 20px;
+    position: relative;
+    top: 120px;
+}
+
+.data dl dt {
+    font-size: 14px;
+}
+
+.data dl dt dd {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.mars {
+    color: rgb(253, 236, 2);
+    margin-left: 2px;
+}
+
+.venus {
+    color: rgb(253, 236, 2);
+    margin-left: 2px;
+}
+
+footer {
+    position: relative;
+    top: 320px;
+    width: 100%;
+    color: #ffffff;
+    background-color: #353949;
+    padding-top: 70px;
+    padding-bottom: 50px;
+}
+
+.foot_container {
+    display: inline-flex;
+    text-align: left;
+}
+
+footer article {
+    position: relative;
+    left: -130px;
+}
+
+footer article span {
+    color: rgb(253, 236, 2);
+    font-weight: bold;
+    font-size: 40px;
+}
+
+footer li {
+    display: block;
+}
+
+.media-icons {
+    display: inline-flex;
+    margin-left: 0;
+}
+
+.listhead {
+    font-weight: bold;
+}
