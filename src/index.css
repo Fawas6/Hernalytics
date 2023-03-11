@@ -301,3 +301,115 @@ footer li {
 .listhead {
     font-weight: bold;
 }
+
+#body_stateresult {
+    height: 2370px;
+    background-color: #091627;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 70px;
+    overflow-y: hidden;
+}
+
+.presidential_link {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.presidential_link:hover {
+    color: #ffffff;
+}
+
+.president {
+    color: #ffffff;
+    position: relative;
+    top: 220px;
+    font-weight: 600;
+}
+
+.bar_container {
+    width: 100%;
+    background-color: grey;
+    display: flex;
+    height: 17px;
+}
+
+.Peter_bar {
+    width: 50%!important;
+    text-align: left;
+    background-color: green;
+    font-size: small;
+}
+
+.Peter_bar span {
+    visibility: hidden;
+}
+
+.Tinubu_bar {
+    width: 30%!important;
+    text-align: center;
+    background-color: skyblue;
+    font-size: small;
+}
+
+.Tinubu_bar span {
+    visibility: hidden;
+}
+
+.Atiku_bar {
+    width: 20%!important;
+    text-align: right;
+    background-color: red;
+    font-size: small;
+}
+
+.Atiku_bar span {
+    visibility: hidden;
+}
+
+.post-card1 {
+    display: inline-block;
+    text-align: left;
+    margin-left: 280px;
+}
+
+.map_api .map_image {
+    position: relative;
+    top: 200px;
+}
+
+.map_api h2 {
+    position: relative;
+    top: 230px;
+    color: rgb(253, 236, 2);
+    font-weight: 600;
+}
+
+.post-card2 {
+    color: rgb(253, 236, 2);
+    position: relative;
+    top: 250px;
+    font-size: 15px;
+    font-weight: 600;
+    display: inline-block;
+    text-align: left;
+}
+
+.post-card2 div {
+    margin-left: 10px;
+}
+
+.state_results {
+    position: relative;
+    top: 280px;
+    color: #ffffff;
+}
+
+.post-card3 {
+    color: rgb(253, 236, 2);
+    font-size: 15px;
+    font-weight: 600;
+    display: inline-block;
+    text-align: left;
+}

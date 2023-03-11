@@ -1,39 +1,35 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom";
-import Chart from 'react-google-charts'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons'
-import { faSquare } from '@fortawesome/free-solid-svg-icons'
-import { faMars } from '@fortawesome/free-solid-svg-icons'
-import { faVenus } from '@fortawesome/free-solid-svg-icons'
-import { faSquarePollVertical } from '@fortawesome/free-solid-svg-icons'
+import { faSquarePollVertical, faCaretDown, faUser, faUsers } from '@fortawesome/free-solid-svg-icons'
+import { faUserPlus } from '@fortawesome/free-solid-svg-icons'
+import { faUserCheck } from '@fortawesome/free-solid-svg-icons'
+import Button from '@mui/material/Button';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import WhatsappIcon from '@mui/icons-material/WhatsApp';
-import { textAlign } from '@mui/system'
+import President from '../components/President';
+import { useState } from 'react'
+import Chart from 'react-google-charts'
+import Map from '../components/Map';
+import StateResult from '../components/StateResult';
 
-export default function Home() { 
-  const geoData = [
-    ['Country', 'Popularity'],
-    ['Germany', 200],
-    ['United States', 300],
-    ['Brazil', 400],
-    ['Canada', 500],
-    ['France', 600],
-    ['RU', 700],
-    ['Nigeria', 800],
-  ]
-  const pieData = [
-    ['Task', 'Hours per Day'],
-    ['Accepted Voters', 11],
-    ['Rejected Voters', 2],
-  ]
-  const pieOptions = {
-    title: 'My Daily Activities',
-    pieHole: 0.4,
-  }
+export default function Presidential() {
+    const geoData = [
+        ['Country', 'Popularity'],
+        ['Germany', 200],
+        ['United States', 300],
+        ['Brazil', 400],
+        ['Canada', 500],
+        ['France', 600],
+        ['RU', 700],
+        ['Nigeria', 800],
+    ]
   return (
-    <div id='body'>
+    <div id='body_stateresult'>
+
       <section className='title'>
        <header>Post Election Data<span>Presidential / 2023</span></header>
        <div className='sub-menu'>
@@ -48,10 +44,10 @@ export default function Home() {
          <li><a className="dropdown-item" href="#">Post-Election Analysis</a></li>
         </ul>
         <button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Presidential
+        <Link to="./Presidential" className='presidential_link'>Presidential</Link>
         </button>
         <ul className='dropdown-menu'>
-         <li><Link className="dropdown-item" to="/Presidential">Presidential</Link></li>
+         <li><a className="dropdown-item" href="#">Presidential</a></li>
          <li><a className="dropdown-item" href="#">Gubernatorial</a></li>
          <li><a className="dropdown-item" href="#">Senate</a></li>
          <li><a className="dropdown-item" href="#">House of Representatives</a></li>
@@ -82,56 +78,39 @@ export default function Home() {
        </div>
        <hr className='horizontal-line'/>
       </section>
-      <section className='map_container'>
-      <div className='map_controller'>
-      <FontAwesomeIcon className='plus' icon={faPlus} />
-      <FontAwesomeIcon className='minus' icon={faMinus} />
-      </div>
-      <div className="map_image container mt-5">
-        <Chart
-          width={'1000px'}
-          height={'620px'}
-          chartType="GeoChart"
-          data={geoData}
-          // Note: you will need to get a mapsApiKey for your project.
-          // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
-          mapsApiKey="YOUR_MAP_API_KEY_GOES_HERE"
-          rootProps={{ 'data-testid': '1' }}
-        />
-      </div>
-      <div className='marker'>
-      <FontAwesomeIcon  className='marker1' icon={faSquare} /><span className='marker_label'>APC</span>
-      <FontAwesomeIcon  className='marker2' icon={faSquare} /><span className='marker_label'>LP</span>
-      <FontAwesomeIcon  className='marker3' icon={faSquare} /><span className='marker_label'>PDP</span>
-      </div>
+
+      <section className='president'>
+        <div>PRESIDENT</div>
+        <div className='bar_container'>
+            <div className='Peter_bar'><span>Winning Candidate</span></div>
+            <div className='Tinubu_bar'><span>1st Runner-up</span></div>
+            <div className='Atiku_bar'><span>2nd Runner-up</span></div>
+        </div>
+        <President />
       </section>
-      <section className='analysis'>
-        <div className="container mt-5">
-        <Chart
-          width={'600px'}
-          height={'320px'}
-          chartType="PieChart"
-          loader={<div>Loading Chart</div>}
-          data={pieData}
-          options={pieOptions}
-          rootProps={{ 'data-testid': '3' }}
-        />
+
+      <section className='map_api'>
+        <div className="map_image container mt-5">
+            <Chart
+            width={'1000px'}
+            height={'620px'}
+            chartType="GeoChart"
+            data={geoData}
+            // Note: you will need to get a mapsApiKey for your project.
+            // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
+            mapsApiKey="YOUR_MAP_API_KEY_GOES_HERE"
+            rootProps={{ 'data-testid': '1' }}
+            />
         </div>
-        <div className='nigeria_map'>
-          <h6>CANDIDATES BY GEOPOLITICAL ZONES</h6>
-          <img src='images/mapofnigeria.png' width='500px' height='400px' alt=''/>
-        </div>
-        <div className='data'>
-          <dl>
-            <dt>TOTAL ELECTED MEMBERS</dt>
-            <dd>10,000</dd>
-            <dt>MALE<FontAwesomeIcon className='mars' icon={faMars} /></dt>
-            <dd>9,000</dd>
-            <dt>FEMALE<FontAwesomeIcon className='venus' icon={faVenus} /></dt>
-            <dd>1,000</dd>
-          </dl>
-        </div>
+        <h2>Leading Candidate Stats Per State</h2>
+        <Map />
       </section>
+
+      <section className='state_results'>
+        <h2>State Results</h2>
+        <StateResult />
+      </section> 
+
       <footer>
         <div className='foot_container'>
         <article><span><FontAwesomeIcon icon={faSquarePollVertical} />Hernalytics</span><br/>
@@ -169,7 +148,8 @@ export default function Home() {
           </ul>
         </div>
         </div>           
-      </footer>
+      </footer>   
+
     </div>
   )
 }
